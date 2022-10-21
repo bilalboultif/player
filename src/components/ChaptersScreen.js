@@ -31,6 +31,7 @@ const ChaptersScreen = ({ chapters, chapterHandler }) => {
           </div>
         )}
       </ul>
+      
     </div>
   )
 }

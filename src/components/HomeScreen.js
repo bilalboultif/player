@@ -77,8 +77,10 @@ const HomeScreen = () => {
         <div class="col-md-12 scroll fs-2 fw-bold">
         <ChaptersScreen  chapters={chapters} chapterHandler={chapterHandler} />
         </div>
+        <h6 style={{"color": "yellow"}} class="p-5 text-center  col-lg-12 py-0 shadow-lg">Created by Rabiaa Dermouchi & Boultif Tahar 2022</h6>
       </div>
     </div>
+    
     
   </div>
   )
