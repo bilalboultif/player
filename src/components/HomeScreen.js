@@ -63,21 +63,22 @@ const HomeScreen = () => {
      
   
   
-      <div style={{"color": "yellow"}} class="p-5 text-center  col-lg-12 py-0 fs-2 fw-bold shadow-lg">
+      <div style={{"color": "#e09b7d", "textShadow": "2px 2px 4px #000000"}} class="p-5 text-center  col-lg-12 py-0 fs-2 fw-bold shadow-lg">
       قائمة القراء 
       </div>
       <div class="row p-0 home-body">
          
-        <div class="col-md-12 scroll fs-2 fw-bold">
+        <div class="col-md-12 scroll fs-4 fw-bold">
         <RecitersScreen style={{"color": "yellow"}} reciters={reciters} reciterHandler={reciterHandler} /> 
         </div>
-        <div style={{"color": "yellow"}} class="p-5 text-center  col-lg-12 py-0 fs-2 fw-bold shadow-lg">
+        <div style={{"color": "#e09b7d", "textShadow": "2px 2px 4px #000000"}} class="p-5 text-center  col-lg-12 py-0 fs-2 fw-bold shadow-lg">
         فهرس السور   
       </div>
-        <div class="col-md-12 scroll fs-2 fw-bold">
+        <div class="col-md-12 scroll fs-4 fw-bold">
         <ChaptersScreen  chapters={chapters} chapterHandler={chapterHandler} />
         </div>
-        <h6 style={{"color": "yellow"}} class="p-5 text-center  col-lg-12 py-0 shadow-lg">Created by Rabiaa Dermouchi & Boultif Tahar 2022</h6>
+        <hr></hr>
+        <h6 style={{"color": "white", "textShadow": "2px 2px 4px #000000"}} class="p-5 text-center  col-lg-12 py-0  shadow-lg">Created by Rabiaa Dermouchi & Boultif Tahar 2022</h6>
       </div>
     </div>
     

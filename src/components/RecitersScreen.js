@@ -16,15 +16,15 @@ const RecitersScreen = ({ reciters, reciterHandler }) => {
                 setActiveId(reciter.id)
                 console.log(reciter)
               }}
-              className={`d-flex py-0 cursor ${
+              className={`list-group-item bg-transparent border-0 text-light py-1 d-flex justify-content-between cursor fs-7 ${
+               
                 reciter.id === activeId && 'active'
                 
               }`}
             >
             
-                         <FaUserCircle className='fs-1 ' />
-              <span className='px-3' >{reciter.name}</span> <br />
-              <span className='px-3'>{reciter.rewaya}</span> <br />
+                         
+              <span><FaUserCircle className='fs-1 ' /> {reciter.name}</span> <span>{reciter.rewaya}</span> 
              
               
             </div>

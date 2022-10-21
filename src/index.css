@@ -3,7 +3,6 @@
 body {
   font-family: 'Lato', sans-serif;
   background-image: url(https://images.unsplash.com/photo-1609599006353-e629aaabfeae?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
-  background-repeat: no-repeat;
   background-size:cover;
   overflow: hidden;
 }
@@ -29,7 +28,8 @@ audio {
   cursor: pointer;
 }
 .active {
-  color: rgb(27, 27, 20) !important;
+  color: rgb(186, 183, 147) !important;
+  text-shadow: 2px 2px #FF0000;
   
 }
 

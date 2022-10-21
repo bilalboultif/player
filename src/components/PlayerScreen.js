@@ -12,7 +12,7 @@ const PlayerScreen = ({ reciterDetail, chapterDetail }) => {
     <div style={{border: '1px black'}}>
     <div style={{border: '1px black'}} className='width-vh-50 height-vh-50 shadow-lg p-2 bg-red'>
       <h1 className='menu fs-3 fw-bold text-center'>الاستماع للقرآن الكريم</h1> <hr />
-      <h6 className='menu  fw-bold text-center'>اللهم صل على محمد وعلى آل محمد كما صليت على إبراهيم وعلى آل إبراهيم، إنك حميد مجيد، اللهم بارك على محمد وعلى آل محمد كما باركت على إبراهيم وعلى آل إبراهيم، إنك حميد مجيد</h6> <hr />
+      <h6 style={{"color": "#e09b7d", "textShadow": "2px 2px 4px #000000"}} className='menu  fw-bold text-center'>اللهم صل على محمد وعلى آل محمد كما صليت على إبراهيم وعلى آل إبراهيم، إنك حميد مجيد، اللهم بارك على محمد وعلى آل محمد كما باركت على إبراهيم وعلى آل إبراهيم، إنك حميد مجيد</h6> <hr />
 
       {reciterDetail !== null && chapterDetail !== null ? (
         <ul className='list-group text-end'>
