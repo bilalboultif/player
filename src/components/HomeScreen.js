@@ -4,12 +4,17 @@ import RecitersScreen from './RecitersScreen'
 import PlayerScreen from './PlayerScreen'
 import ChaptersScreen from './ChaptersScreen'
 
+
 const HomeScreen = () => {
   const [reciters, serReciters] = useState([])
   const [chapters, setChapters] = useState([])
 
   const [chapterDetail, setChapterDetail] = useState(null)
+  
   const [reciterDetail, setReciterDetail] = useState(null)
+  
+  
+
 
   // Get All Reciters with Audio
   useEffect(() => {
@@ -36,6 +41,7 @@ const HomeScreen = () => {
     reciters && reciters.length > 0 && fetchData()
   }, [reciters])
 
+ 
   const reciterHandler = (reciter) => {
     setReciterDetail(reciter)
   }
@@ -44,32 +50,37 @@ const HomeScreen = () => {
   }
 
   return (
-    <div>
-      <div className='row p-0 home-body margin-0'>
-    <div className='p-5 text-center  col-lg-6 pb-0 fs-2 fw-bold min-vh-100 shadow-lg p-0 bg-red'>
-    قائمة القراء      </div>
-      <div className='p-5 text-center  col-lg-6 pb-0 fs-2 fw-bold min-vh-100 shadow-lg p-0 bg-orang'>
-      فهرس السور
-      </div>
-      
+   
+    <div class="row p-0 home-body margin-0">
+      <div class="col-md-12">
+    <PlayerScreen
+            reciterDetail={reciterDetail}
+            chapterDetail={chapterDetail}
+            
+          />
     </div>
-      
-    <div className='row p-0 home-body'>
-    <div className='col-lg-6  scroll'>
-        <RecitersScreen reciters={reciters} reciterHandler={reciterHandler} />
+    <div class="col-md-12">  
+     
+  
+  
+      <div style={{"color": "yellow"}} class="p-5 text-center  col-lg-12 py-0 fs-2 fw-bold shadow-lg">
+      قائمة القراء 
       </div>
-      <div className='col-lg-6  scroll '>
-        <ChaptersScreen chapters={chapters} chapterHandler={chapterHandler} />
+      <div class="row p-0 home-body">
+         
+        <div class="col-md-12 scroll fs-2 fw-bold">
+        <RecitersScreen style={{"color": "yellow"}} reciters={reciters} reciterHandler={reciterHandler} /> 
+        </div>
+        <div style={{"color": "yellow"}} class="p-5 text-center  col-lg-12 py-0 fs-2 fw-bold shadow-lg">
+        فهرس السور   
       </div>
-      
+        <div class="col-md-12 scroll fs-2 fw-bold">
+        <ChaptersScreen  chapters={chapters} chapterHandler={chapterHandler} />
+        </div>
+      </div>
     </div>
-    <div className='col-lg-12  '>
-        <PlayerScreen
-          reciterDetail={reciterDetail}
-          chapterDetail={chapterDetail}
-        />
-      </div>
-    </div>
+    
+  </div>
   )
 }
 
