@@ -3,6 +3,19 @@ import { FaUserCircle } from 'react-icons/fa'
 
 const RecitersScreen = ({ reciters, reciterHandler }) => {
   const [activeId, setActiveId] = useState('')
+  const handleMouseEnter = e => {
+
+    e.target.style.color="#e09b7d"
+    e.target.style.textShadow = "2px 2px 4px #000000"
+    e.target.style.fontWeight = "bold"
+    e.target.style.textAlign= "center";
+    
+  }
+  const handleMouseLeave = e => {
+    e.target.style.color="white"
+    e.target.style.textShadow = "2px 2px 4px #000000"
+    e.target.style.textAlign= "center";
+  }
 
   return (
     <div className='min-vh-100 shadow-lg p-2 bg-red '>
@@ -16,7 +29,7 @@ const RecitersScreen = ({ reciters, reciterHandler }) => {
                 setActiveId(reciter.id)
                 console.log(reciter)
               }}
-              className={`list-group-item bg-transparent border-0 text-light py-1 d-flex justify-content-between cursor fs-7 ${
+              className={`list-group-item bg-transparent border-0 text-light py-1 d-flex justify-content-around cursor fs-6  ${
                
                 reciter.id === activeId && 'active'
                 
@@ -24,7 +37,9 @@ const RecitersScreen = ({ reciters, reciterHandler }) => {
             >
             
                          
-              <span><FaUserCircle className='fs-1 ' /> {reciter.name}</span> <span>{reciter.rewaya}</span> 
+              <span onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}><FaUserCircle className='fs-1 ' /> {reciter.name}</span> <span onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}>{reciter.rewaya}</span> 
              
               
             </div>
