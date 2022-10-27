@@ -3,6 +3,8 @@ import { FaUserCircle } from 'react-icons/fa'
 
 const RecitersScreen = ({ reciters, reciterHandler }) => {
   const [activeId, setActiveId] = useState('')
+  let txt = "";
+  
   const handleMouseEnter = e => {
 
     e.target.style.color="#e09b7d"
@@ -37,7 +39,7 @@ const RecitersScreen = ({ reciters, reciterHandler }) => {
             >
             
                          
-              <span onMouseEnter={handleMouseEnter}
+              <span onMouseEnter={handleMouseEnter} 
         onMouseLeave={handleMouseLeave}><FaUserCircle className='fs-1 ' /> {reciter.name}</span> <span onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}>{reciter.rewaya}</span> 
              

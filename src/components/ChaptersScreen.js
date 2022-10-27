@@ -2,6 +2,7 @@ import { useState } from 'react'
 
 const ChaptersScreen = ({ chapters, chapterHandler }) => {
   const [activeId, setActiveId] = useState('')
+ 
   const handleMouseEnter = e => {
 
     e.target.style.color="#e09b7d"
@@ -38,9 +39,10 @@ const ChaptersScreen = ({ chapters, chapterHandler }) => {
                 
               >
 
-                <b  onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}b
-      title={`رقم الصفحة   ${chapter.pages[1]} عدد الآيات ${chapter.verses_count}`}>〘{chapter.name_arabic}〙</b> <span>{chapter.translated_name.name}</span>
+                <span  onMouseEnter={handleMouseEnter}
+                
+        onMouseLeave={handleMouseLeave}
+        >〘{chapter.name_arabic}〙</span> <span>{chapter.translated_name.name}</span>
               </li>
               <hr />
             </div>

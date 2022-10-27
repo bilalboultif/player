@@ -7,6 +7,7 @@ const PlayerScreen = ({ reciterDetail, chapterDetail }) => {
     reciter + '/' + ('00' + number).slice(-3) + '.mp3'
 
   useEffect(() => {}, [chapterDetail, reciterDetail])
+
   const handleMouseEnter = e => {
 
     e.target.style.color="#e09b7d"
@@ -34,20 +35,19 @@ const PlayerScreen = ({ reciterDetail, chapterDetail }) => {
         اللهم صل على محمد وعلى آل محمد كما صليت على إبراهيم وعلى آل إبراهيم، إنك حميد مجيد، اللهم بارك على محمد وعلى آل محمد كما باركت على إبراهيم وعلى آل إبراهيم، إنك حميد مجيد
       </h6>
       {reciterDetail !== null && chapterDetail !== null ? (
-        <ul className='list-group text-end'>
+        <ul className='list-group text-end fw-bold' >
           <div>
-            <li
-              className={`list-group-item bg-transparent border-0 text-light py-1 d-flex justify-content-around cursor fs-6`}
+            <li 
+              className={`list-group-item bg-transparent border-0 text-light py-1 d-flex justify-content-evenly cursor fs-6`}
             >
              
-              <span>{reciterDetail.name}</span>
-              <span className='fw-bold'>:القارئ </span>{' '}
+             <span>رواية {reciterDetail.rewaya}</span><span>{reciterDetail.name}</span><span className='fw-bold'>:القارئ </span>{' '}
             </li>
            
             <li
-              className={`list-group-item bg-transparent border-0 text-light py-0 d-flex justify-content-around cursor fs-7 p-0`}
+              className={`list-group-item bg-transparent border-0 text-light py-0 d-flex justify-content-evenly cursor fs-7 p-0`}
             >
-              <span>{chapterDetail.name_arabic}</span>
+             <span>عدد الآيات {chapterDetail.verses_count}  آية</span><span> رقم الصفحة  {chapterDetail.pages[1]}  </span> <span> {chapterDetail.name_arabic} </span>
               <span  className='fw-bold color-blue'> :السورة  </span>{' '}
               
             </li>
